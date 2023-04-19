@@ -167,4 +167,81 @@ widgetframe::frameWidget(cambio_nominal_dolar_gg,
                          height = '100%')
 ``` 
   
-  
+---
+## O BRASIL EM PERSPECTIVA
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+library(magrittr)
+
+cambio_nominal_euro_gg <- cambio_nominal_euro %>% 
+  dplyr::filter(date >= as.Date('1995-01-01')) %>% 
+  dplyr::rename('Data' = date,
+                'Valor' = value) %>% 
+
+  ggplot2::ggplot() +
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
+                     colour = '#23395b',
+                     size = .5) +
+  ggplot2::scale_y_continuous(labels = scales::number_format(decimal.mark = ',', 
+                                                             accuracy = 0.0001)) +
+  ggplot2::labs(title = 'Taxa de Câmbio Nominal',
+                subtitle = 'Euro',
+                x = 'Períodos',
+                y = 'R$/EUR',
+                caption = 'Dados: BCB.') +
+  xaringanthemer::theme_xaringan(text_font_size = 15,
+                                 title_font_size = 20)
+
+cambio_nominal_euro_gg  <- plotly::ggplotly(cambio_nominal_euro_gg)
+
+widgetframe::frameWidget(cambio_nominal_euro_gg, 
+                         width = '100%', 
+                         height = '100%')
+```
+---
+## O BRASIL EM PERSPECTIVA
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+library(magrittr)
+
+cambio_nominal_iene_gg <- cambio_nominal_iene %>% 
+  dplyr::filter(date >= as.Date('1995-01-01')) %>% 
+  dplyr::rename('Data' = date,
+                'Valor' = value) %>% 
+
+  ggplot2::ggplot() +
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
+                     colour = '#23395b',
+                     size = .5) +
+  ggplot2::scale_y_continuous(labels = scales::number_format(decimal.mark = ',', 
+                                                             accuracy = 0.0001)) +
+  ggplot2::labs(title = 'Taxa de Câmbio Nominal',
+                subtitle = 'Iene',
+                x = 'Períodos',
+                y = 'R$/JPY',
+                caption = 'Dados: BCB.') +
+  xaringanthemer::theme_xaringan(text_font_size = 15,
+                                 title_font_size = 20)
+
+cambio_nominal_iene_gg  <- plotly::ggplotly(cambio_nominal_iene_gg)
+
+widgetframe::frameWidget(cambio_nominal_iene_gg, 
+                         width = '100%', 
+                         height = '100%')
+```
+
+---
+<div style="text-align: justify"> 
+## TAXA DE CÂMBIO NOMINAL
+
+- A **Taxa de Câmbio Nominal (e) corresponde a um preço**, ou seja, ela é 
+determinada pela dinâmica do mercado internacional.
+
+  - Os ofertantes (Agentes que têm Dólar e querem vender em troca de Reais), 
+  por exemplo: Exportadores, turistas estrangeiros, investidores dos E.U.A;
+
+  - Os demandantes (Agentes que têm Reais e querem comprar Dólar em troca), 
+  por exemplo: Importadores, turistas brasileiros, investidores brasileiros que 
+  querem aplicar fora do país.  
