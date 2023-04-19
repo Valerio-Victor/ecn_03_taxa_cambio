@@ -43,6 +43,7 @@ name: introducao
 ---
 <div style="text-align: justify">
 ## INTRODUÇÃO
+ ---
 
 - Na maior parte dos casos, em cada país os preços dos Bens e Serviços (B&F) são 
 fixados de acordo com a moeda local.
@@ -57,7 +58,8 @@ Alemanha é utilizado o Euro e assim sucessivamente.
 ---
 <div style="text-align: justify"> 
 ## INTRODUÇÃO
-
+ ---
+ 
 - Contudo, para que haja o comércio internacional é necessário utilizar uma 
 **taxa de conversão entre as moedas locais de cada país**. 
 
@@ -76,6 +78,7 @@ name: nominal
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO NOMINAL
+ ---
 
 - Pode-se calcular a **taxa de câmbio nominal (e)** a partir da seguinte razão:
 
@@ -87,6 +90,7 @@ moeda local necessária para de adquirir uma unidade de moeda estrangeira**.
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO NOMINAL
+ ---
 
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
@@ -125,6 +129,7 @@ cambio_nominal_iene_h <- cambio_nominal_iene %>%
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO NOMINAL
+ ---
 
 - Deve-se tomar cuidado quando se avaliar a taxa de câmbio nominal. Isto pois sua
 análise pode ser contraintuitiva:
@@ -137,6 +142,7 @@ análise pode ser contraintuitiva:
 
 ---
 ## O BRASIL EM PERSPECTIVA
+ ---
 
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
@@ -170,6 +176,7 @@ widgetframe::frameWidget(cambio_nominal_dolar_gg,
   
 ---
 ## O BRASIL EM PERSPECTIVA
+ ---
 
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
@@ -202,6 +209,7 @@ widgetframe::frameWidget(cambio_nominal_euro_gg,
 ```
 ---
 ## O BRASIL EM PERSPECTIVA
+ ---
 
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
@@ -236,6 +244,7 @@ widgetframe::frameWidget(cambio_nominal_iene_gg,
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO NOMINAL
+ ---
 
 - A **Taxa de Câmbio Nominal (e) corresponde a um preço**, ou seja, ela é 
 determinada pela dinâmica do mercado internacional.
@@ -250,6 +259,7 @@ determinada pela dinâmica do mercado internacional.
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO NOMINAL
+ ---
 
 - Exemplo de ofertante: Um produtor de café que exporte seu produto. 
 
@@ -270,6 +280,7 @@ name: impacto_nominal
 ---
 <div style="text-align: justify"> 
 ## IMPACTO DO CÂMBIO NOMINAL NO MERCADO INTERNACIONAL
+ ---
 
 - Pode-se assumir a seguinte relação entre a taxa de câmbio nominal e o comércio 
 internacional:
@@ -288,6 +299,7 @@ name: real
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO REAL
+ ---
 
 - A **Taxa de Câmbio Real (E)** corresponde a taxa que compara os preços de um 
 mesmo bem ou serviço entre países diferentes;
@@ -297,6 +309,7 @@ mesmo bem ou serviço entre países diferentes;
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO REAL
+ ---
 
 - Suponha que o preço de um notebook seja $𝑷^∗ = 1000 \ USD$ nos E.U.A e no 
 Brasil seja $𝐏=5000 \ BRL$. Considere ainda a taxa de câmbio nominal inicial 
@@ -312,6 +325,7 @@ medido em Reais: $Preço \ em \ Reais =𝒆 \cdot 𝑷^∗ = 2 \cdot 1000$.
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO REAL
+ ---
 
 - Se $𝒆 \cdot 𝑷^∗>𝐏$, então, o consumidor prefere comprar o bem ou serviço no Brasil 
 (em moeda local);
@@ -328,6 +342,7 @@ serviço ou comprar no Brasil (em moeda local).
 ---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO REAL
+ ---
 
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
@@ -365,6 +380,7 @@ cambio_real_iene_h <- cambio_real_iene %>%
   
 ---
 ## O BRASIL EM PERSPECTIVA
+ ---
 
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
@@ -383,7 +399,7 @@ cambio_real_dolar_gg <- cambio_real_dolar %>%
                                                              accuracy = 0.0001)) +
   ggplot2::labs(title = 'Taxa de Câmbio Real',
                 x = 'Períodos',
-                y = 'Dólar Americano (IPCA, Base: Jun/1994 = 100)',
+                y = 'Dólar (IPCA, Base: Jun/1994 = 100)',
                 caption = 'Dados: BCB.') +
   xaringanthemer::theme_xaringan(text_font_size = 15,
                                  title_font_size = 20)
@@ -397,6 +413,7 @@ widgetframe::frameWidget(cambio_real_dolar_gg,
 
 ---
 ## O BRASIL EM PERSPECTIVA
+ ---
 
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
@@ -429,6 +446,7 @@ widgetframe::frameWidget(cambio_real_euro_gg,
 
 ---
 ## O BRASIL EM PERSPECTIVA
+ ---
 
 ```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
 
@@ -467,6 +485,7 @@ name: impacto_real
 ---
 <div style="text-align: justify"> 
 ## IMPACTO DO CÂMBIO REAL NA COMPETITIVIDADE INDUSTRIAL
+ ---
 
 - Se a taxa de câmbio real apresenta uma **variação negativa** diz-se que houve uma 
 **diminuição da competitividade nacional**. Seja porque os preços do resto do mundo 
