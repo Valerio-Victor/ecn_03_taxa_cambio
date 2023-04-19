@@ -5,7 +5,7 @@ author: 'Autor: Victor Valerio'
 date: 'Última atualização: `r format(Sys.Date(),"%d-%m-%Y")`'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: ['default', 'meutema.css']
     nature:
       highlightStyle: github
       highlightLines: true
@@ -37,7 +37,7 @@ xaringanExtra::use_search(show_icon = TRUE)
 
 ---
 class: inverse, center, middle 
-name: #introducao
+name: introducao
 ## INTRODUÇÃO
 
 ---
@@ -70,7 +70,7 @@ câmbio nominal** (denotada por **e**).
 
 ---
 class: inverse, center, middle 
-name: #nominal
+name: nominal
 ## TAXA DE CÂMBIO NOMINAL
 
 ---
@@ -264,7 +264,7 @@ produção.
 
 ---
 class: inverse, center, middle 
-name: #impacto_nominal
+name: impacto_nominal
 ## IMPACTO DO CÂMBIO NOMINAL NO MERCADO INTERNACIONAL
 
 ---
@@ -282,7 +282,7 @@ internacional:
 
 ---
 class: inverse, center, middle 
-name: #real
+name: real
 ## TAXA DE CÂMBIO REAL
 
 ---
@@ -461,7 +461,7 @@ widgetframe::frameWidget(cambio_real_iene_gg,
 
 ---
 class: inverse, center, middle 
-name: #impacto_real
+name: impacto_real
 ## IMPACTO DO CÂMBIO REAL NA COMPETITIVIDADE INDUSTRIAL
 
 ---
