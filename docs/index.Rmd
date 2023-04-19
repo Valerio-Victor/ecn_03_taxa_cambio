@@ -323,3 +323,42 @@ medido em Reais: $Preço \ em \ Reais =𝒆 \cdot 𝑷^∗ = 2 \cdot 1000$.
 
 - Se $𝒆 \cdot 𝑷^∗=𝐏$, então, o consumidor é indiferente entre importar o bem ou 
 serviço ou comprar no Brasil (em moeda local).
+
+---
+<div style="text-align: justify"> 
+## TAXA DE CÂMBIO REAL
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+library(magrittr)
+
+# Dólar Americano
+cambio_real_dolar <- BETS::BETSget(11753, 
+                                   data.frame = TRUE) 
+
+cambio_real_dolar_h <- cambio_real_dolar %>% 
+  dplyr::filter(date == lubridate::today())
+
+# Euro
+cambio_real_euro <- BETS::BETSget(11772,
+                                  data.frame = TRUE)
+
+cambio_real_euro_h <- cambio_real_euro %>%
+  dplyr::filter(date == lubridate::today())
+
+# Iene
+cambio_real_iene <- BETS::BETSget(11754,
+                                  data.frame = TRUE)
+
+cambio_real_iene_h <- cambio_real_iene %>%
+  dplyr::filter(date == lubridate::today())
+```
+
+- São alguns exemplos de taxa de câmbio real:
+
+  - $E_{real/dólar} =$ `r scales::number(x = cambio_nominal_dolar_h$value, decimal.mark = ',', accuracy = 0.0001)`
+
+  - $E_{real/euro} =$ `r scales::number(x = cambio_nominal_euro_h$value, decimal.mark = ',', accuracy = 0.0001)`
+  
+  - $E_{real/iene} =$ `r scales::number(x = cambio_nominal_iene_h$value, decimal.mark = ',', accuracy = 0.0001)`
+  
