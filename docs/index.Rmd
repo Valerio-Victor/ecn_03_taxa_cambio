@@ -83,3 +83,32 @@ $$e= \frac{Unidades \ de \ Moeda \ Local}{Uma \ Unidade \ de \ Moeda \ Estrangei
 - Assim, pode-se interpretar a taxa de câmbio nominal como a **quantidade de 
 moeda local necessária para de adquirir uma unidade de moeda estrangeira**.
 
+---
+<div style="text-align: justify"> 
+## TAXA DE CÂMBIO NOMINAL
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+library(magrittr)
+
+# Dólar Americano
+cambio_nominal_dolar <- BETS::BETSget(10813, 
+                                      data.frame = TRUE) 
+
+cambio_nominal_dolar_h <- cambio_nominal_dolar %>% 
+  dplyr::filter(date == lubridate::today())
+
+# Euro
+cambio_nominal_euro <- BETS::BETSget(21620,
+                                     data.frame = TRUE)
+
+cambio_nominal_euro_h <- cambio_nominal_euro %>%
+  dplyr::filter(date == lubridate::today())
+
+# Iene
+cambio_nominal_iene <- BETS::BETSget(21622,
+                                     data.frame = TRUE)
+
+cambio_nominal_iene_h <- cambio_nominal_iene %>%
+  dplyr::filter(date == lubridate::today())
+```
