@@ -112,3 +112,14 @@ cambio_nominal_iene <- BETS::BETSget(21622,
 cambio_nominal_iene_h <- cambio_nominal_iene %>%
   dplyr::filter(date == lubridate::today())
 ```
+
+- São alguns exemplos de taxa de câmbio nominal:
+
+  - $e_{real/dólar} =$ `r scales::number(x = cambio_nominal_dolar_h$value, decimal.mark = ',', accuracy = 0.0001, suffix = ' R$/USD')`
+
+  - $e_{real/euro} =$ `r scales::number(x = cambio_nominal_euro_h$value, decimal.mark = ',', accuracy = 0.0001, suffix = ' R$/EUR')`
+  
+  - $e_{real/iene} =$ `r scales::number(x = cambio_nominal_iene_h$value, decimal.mark = ',', accuracy = 0.0001, suffix = ' R$/JPY')`
+  
+  
+  
