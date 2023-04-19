@@ -362,3 +362,117 @@ cambio_real_iene_h <- cambio_real_iene %>%
   
   - $E_{real/iene} =$ `r scales::number(x = cambio_nominal_iene_h$value, decimal.mark = ',', accuracy = 0.0001)`
   
+---
+## O BRASIL EM PERSPECTIVA
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+library(magrittr)
+
+cambio_real_dolar_gg <- cambio_real_dolar %>% 
+  dplyr::filter(date >= as.Date('1995-01-01')) %>% 
+  dplyr::rename('Data' = date,
+                'Valor' = value) %>% 
+
+  ggplot2::ggplot() +
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
+                     colour = '#23395b',
+                     size = .5) +
+  ggplot2::scale_y_continuous(labels = scales::number_format(decimal.mark = ',', 
+                                                             accuracy = 0.0001)) +
+  ggplot2::labs(title = 'Taxa de Câmbio Real',
+                x = 'Períodos',
+                y = 'Dólar Americano (IPCA, Base: Jun/1994 = 100)',
+                caption = 'Dados: BCB.') +
+  xaringanthemer::theme_xaringan(text_font_size = 15,
+                                 title_font_size = 20)
+
+cambio_real_dolar_gg  <- plotly::ggplotly(cambio_real_dolar_gg)
+
+widgetframe::frameWidget(cambio_real_dolar_gg, 
+                         width = '100%', 
+                         height = '100%')
+```
+
+---
+## O BRASIL EM PERSPECTIVA
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+library(magrittr)
+
+cambio_real_euro_gg <- cambio_real_euro %>% 
+  dplyr::filter(date >= as.Date('1995-01-01')) %>% 
+  dplyr::rename('Data' = date,
+                'Valor' = value) %>% 
+
+  ggplot2::ggplot() +
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
+                     colour = '#23395b',
+                     size = .5) +
+  ggplot2::scale_y_continuous(labels = scales::number_format(decimal.mark = ',', 
+                                                             accuracy = 0.0001)) +
+  ggplot2::labs(title = 'Taxa de Câmbio Real',
+                x = 'Períodos',
+                y = 'Euro (IPCA, Base: Jun/1994 = 100)',
+                caption = 'Dados: BCB.') +
+  xaringanthemer::theme_xaringan(text_font_size = 15,
+                                 title_font_size = 20)
+
+cambio_real_euro_gg  <- plotly::ggplotly(cambio_real_euro_gg)
+
+widgetframe::frameWidget(cambio_real_euro_gg, 
+                         width = '100%', 
+                         height = '100%')
+```
+
+---
+## O BRASIL EM PERSPECTIVA
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+library(magrittr)
+
+cambio_real_iene_gg <- cambio_real_iene %>% 
+  dplyr::filter(date >= as.Date('1995-01-01')) %>% 
+  dplyr::rename('Data' = date,
+                'Valor' = value) %>% 
+
+  ggplot2::ggplot() +
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
+                     colour = '#23395b',
+                     size = .5) +
+  ggplot2::scale_y_continuous(labels = scales::number_format(decimal.mark = ',', 
+                                                             accuracy = 0.0001)) +
+  ggplot2::labs(title = 'Taxa de Câmbio Real',
+                x = 'Períodos',
+                y = 'Iene (IPA-DI, Base: Dez/1998 = 100)',
+                caption = 'Dados: BCB.') +
+  xaringanthemer::theme_xaringan(text_font_size = 15,
+                                 title_font_size = 20)
+
+cambio_real_iene_gg  <- plotly::ggplotly(cambio_real_iene_gg)
+
+widgetframe::frameWidget(cambio_real_iene_gg, 
+                         width = '100%', 
+                         height = '100%')
+```
+
+---
+class: inverse, center, middle 
+name: #impacto_real
+## IMPACTO DO CÂMBIO REAL NA COMPETITIVIDADE INDUSTRIAL
+
+---
+<div style="text-align: justify"> 
+## IMPACTO DO CÂMBIO REAL NA COMPETITIVIDADE INDUSTRIAL
+
+- Se a taxa de câmbio real apresenta uma **variação negativa** diz-se que houve uma 
+**diminuição da competitividade nacional**. Seja porque os preços do resto do mundo 
+diminuíram mais que os nacionais, seja porque houve uma valorização da taxa de 
+câmbio nominal.
+
+- Se a taxa de câmbio real apresenta uma **variação positiva** diz-se que houve um 
+**aumento da competitividade nacional**. Seja porque os preços do resto do mundo 
+aumentaram mais que os nacionais, seja porque houve uma desvalorização da taxa 
+de câmbio nominal.
