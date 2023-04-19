@@ -121,7 +121,7 @@ cambio_nominal_iene_h <- cambio_nominal_iene %>%
   
   - $e_{real/iene} =$ `r scales::number(x = cambio_nominal_iene_h$value, decimal.mark = ',', accuracy = 0.0001, suffix = ' R$/JPY')`
  
- ---
+---
 <div style="text-align: justify"> 
 ## TAXA DE CÂMBIO NOMINAL
 
@@ -156,9 +156,9 @@ cambio_nominal_dolar_gg <- cambio_nominal_dolar %>%
                 subtitle = 'Dólar Americano',
                 x = 'Períodos',
                 y = 'R$/USD',
-                caption = 'Dados: BCB.') 
-  #xaringanthemer::theme_xaringan(text_font_size = 15,
-  #                               title_font_size = 20)
+                caption = 'Dados: BCB.') +
+  xaringanthemer::theme_xaringan(text_font_size = 15,
+                                 title_font_size = 20)
 
 cambio_nominal_dolar_gg  <- plotly::ggplotly(cambio_nominal_dolar_gg)
 
