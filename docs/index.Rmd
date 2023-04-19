@@ -1,0 +1,55 @@
+---
+title: 'TAXA DE CÂMBIO </br> (AULA 03)'
+subtitle: 'IEPG20 - Introdução à Economia'
+author: 'Autor: Victor Valerio'
+date: 'Última atualização: `r format(Sys.Date(),"%d-%m-%Y")`'
+output:
+  xaringan::moon_reader:
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(base_color = '#23395b')
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+xaringanExtra::use_search(show_icon = TRUE)
+```
+
+## TÓPICOS ABORDADOS
+
+- [**INTRODUÇÃO**](#introducao)
+
+- [**TAXA DE CÂMBIO NOMINAL**](#nominal)
+
+- [**IMPACTO DO CÂMBIO NOMINAL NO MERCADO INTERNACIONAL**](#impacto_nominal)
+
+- [**TAXA DE CÂMBIO REAL**](#real)
+
+- [**IMPACTO DO CÂMBIO REAL NA COMPETITIVIDADE INDUSTRIAL**](#impacto_real)
+
+---
+class: inverse, center, middle 
+name: #introducao
+## INTRODUÇÃO
+
+---
+<div style="text-align: justify">
+## INTRODUÇÃO
+
+- Na maior parte dos casos, em cada país os preços dos Bens e Serviços (B&F) são 
+fixados de acordo com a moeda local.
+
+  - Unidade de Conta;
+  - Reserva de Valor;
+  - Meio de troca.
+
+- Por exemplo, no Brasil é utilizado o Real, nos E.U.A é utilizado o Dólar, na 
+Alemanha é utilizado o Euro e assim sucessivamente. 
+
