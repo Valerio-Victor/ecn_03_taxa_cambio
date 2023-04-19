@@ -120,6 +120,51 @@ cambio_nominal_iene_h <- cambio_nominal_iene %>%
   - $e_{real/euro} =$ `r scales::number(x = cambio_nominal_euro_h$value, decimal.mark = ',', accuracy = 0.0001, suffix = ' R$/EUR')`
   
   - $e_{real/iene} =$ `r scales::number(x = cambio_nominal_iene_h$value, decimal.mark = ',', accuracy = 0.0001, suffix = ' R$/JPY')`
+ 
+ ---
+<div style="text-align: justify"> 
+## TAXA DE CÂMBIO NOMINAL
+
+- Deve-se tomar cuidado quando se avaliar a taxa de câmbio nominal. Isto pois sua
+análise pode ser contraintuitiva:
+
+  - Se a taxa de câmbio nominal **aumenta**, diz-se que há uma 
+  **desvalorização cambial** (ou **valorização da moeda local - real**);
   
+  - Se a taxa de câmbio nominal **diminui** ao longo do tempo, diz-se que há uma 
+  **valorização cambial** (ou **valorização da moeda local - real**).
+
+---
+## O BRASIL EM PERSPECTIVA
+
+```{r, warning = F,message = F, error = F, echo = F, fig.align = 'center', dpi = 300}
+
+library(magrittr)
+
+cambio_nominal_dolar_gg <- cambio_nominal_dolar %>% 
+  dplyr::filter(date >= as.Date('1995-01-01')) %>% 
+  dplyr::rename('Data' = date,
+                'Valor' = value) %>% 
+
+  ggplot2::ggplot() +
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, y = Valor),
+                     colour = '#23395b',
+                     size = .5) +
+  ggplot2::scale_y_continuous(labels = scales::number_format(decimal.mark = ',', 
+                                                             accuracy = 0.0001)) +
+  ggplot2::labs(title = 'Taxa de Câmbio Nominal',
+                subtitle = 'Dólar Americano',
+                x = 'Períodos',
+                y = 'R$/USD',
+                caption = 'Dados: BCB.') 
+  #xaringanthemer::theme_xaringan(text_font_size = 15,
+  #                               title_font_size = 20)
+
+cambio_nominal_dolar_gg  <- plotly::ggplotly(cambio_nominal_dolar_gg)
+
+widgetframe::frameWidget(cambio_nominal_dolar_gg, 
+                         width = '100%', 
+                         height = '100%')
+``` 
   
   
